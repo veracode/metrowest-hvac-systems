@@ -12,7 +12,7 @@ Users at this level are unauthenticated, and can only view public content such a
 
 Example Endpoints
 - `/` - main landing page
-- `/about_us` - contains basic information about the company
+- `/about` - contains basic information about the company
 - `/login` - a user may log in to become authenticated
 
 ---
