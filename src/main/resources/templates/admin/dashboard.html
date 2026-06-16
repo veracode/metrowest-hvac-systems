@@ -10,6 +10,28 @@
 </form>
 <p>What's up admin?</p>
 
+<h2>New User</h2>
+<form method="post" th:action="@{/admin/new_user}">
+    <label> Username
+        <input type="text" name="username">
+    </label>
+    <br>
+    <label> Password
+        <input type="password" name="password">
+    </label>
+    <br>
+    <label> Role
+        <select name="role" id="cars">
+            <option value="ADMIN">Admin</option>
+            <option value="MANAGER">Manager</option>
+            <option value="TECHNICIAN">Technician</option>
+            <option value="CUSTOMER">Customer</option>
+        </select>
+    </label>
+    <br>
+    <input type="submit">
+</form>
+
 <h2>Users</h2>
 <table>
     <thead>

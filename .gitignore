@@ -45,3 +45,5 @@ bin/
 HELP.md
 .idea
 
+### Testing database file ###
+/main.db
