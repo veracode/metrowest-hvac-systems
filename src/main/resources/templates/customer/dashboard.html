@@ -19,7 +19,22 @@
         <input type="number" name="quantities['apples']" value="10" />
         where "apples" is the name of a product. Though, it would be more robust to use the
         product ID, name may work just as a first approach.
+        The idea is to create a <select> element within a separate that enumerates the allowed products,
+        and has an "add" button, which will add the <input> element to the actual order form.
 -->
+<h2>Products (DEBUG)</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${products}">
+        <td th:text="${product}"></td>
+    </tr>
+    </tbody>
+</table>
 
 <h2>Orders</h2>
 <table>

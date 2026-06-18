@@ -4,6 +4,7 @@ import com.metrowest.entity.Order;
 import com.metrowest.entity.OrderEntry;
 import com.metrowest.entity.OrderItems;
 import com.metrowest.entity.OrderStatus;
+import com.metrowest.entity.Product;
 import com.metrowest.repo.OrderRepository;
 import com.metrowest.repo.ProductRepository;
 import com.metrowest.repo.UserRepository;
@@ -93,8 +94,14 @@ public class CustomerController
             model.addAttribute("error", "user not found: " + authentication.getName());
             return "error";
         }
+
+        var products = productRepository.findAll().stream()
+            .map(Product::getName)
+            .toList();
+
         var orders = orderRepository.findByCustomer(user.get());
         model.addAttribute("orders", orders);
+        model.addAttribute("products", products);
         return "customer/dashboard";
     }
 }
