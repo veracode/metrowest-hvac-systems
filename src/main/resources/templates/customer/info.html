@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <title>MetroWest HVAC Systems, Inc.</title>
+</head>
+<body>
+<h1>Your user info</h1>
+<div th:if="${user}">
+    <div>
+        <span>ID:</span><span th:text="${user.id}"></span>
+    </div>
+
+    <div>
+        <span>Name:</span><span th:text="${user.username}"></span>
+    </div>
+
+    <div>
+        <span>Email:</span><span th:text="${user.email}"></span>
+    </div>
+
+    <div>
+        <span>Role:</span><span th:text="${user.role}"></span>
+    </div>
+
+</div>
+</body>
+</html>

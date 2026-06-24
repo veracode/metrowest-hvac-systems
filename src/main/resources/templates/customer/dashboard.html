@@ -75,6 +75,13 @@
     </tbody>
 </table>
 
+<h2>Get User Info</h2>
+<form method="post" th:action="@{/customer/info}">
+    <input type="hidden" name="userID" th:value="${userID}">
+    <input type="submit">
+</form>
+
+
 <script type="text/javascript" th:src="@{/js/product.js}"></script>
 </body>
 </html>
